@@ -7,9 +7,24 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
   },
-  "private": true,
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.config.ts"
+  },
+  "testPathIgnorePatterns": [
+    "<rootDir>/node_modules/",
+    "<rootDir>/dist/"
+  ],
+  "globals": {
+    "ts-jest": {
+      "tsConfig": "<rootDir>/tsconfig.json",
+      "stringfyContentPathRegex": "\\.html$"
+    }
+  },
   "dependencies": {
     "@angular/animations": "^15.0.4",
     "@angular/cdk": "15.0.3",
@@ -29,14 +44,10 @@
     "@angular-devkit/build-angular": "^15.0.4",
     "@angular/cli": "~15.0.4",
     "@angular/compiler-cli": "^15.0.4",
-    "@types/jasmine": "~4.3.0",
+    "@types/jest": "^29.2.5",
     "autoprefixer": "^10.4.13",
-    "jasmine-core": "~4.5.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.0.0",
+    "jest": "^28.0.0",
+    "jest-preset-angular": "^12.2.3",
     "postcss": "^8.4.20",
     "tailwindcss": "^3.2.4",
     "typescript": "~4.8.4"
