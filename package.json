@@ -1,5 +1,6 @@
 {
-  "name": "angular-standalone-starter",
+  "name": "ng-standalone-app",
+  "description": "Application using standalone components approach",
   "version": "0.0.1",
   "author": "Antonio Anderson (https://github.com/santosant)",
   "scripts": {
